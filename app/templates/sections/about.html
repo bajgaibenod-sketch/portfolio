@@ -1,0 +1,132 @@
+<section class="about" id="about">
+
+    <div class="about-container">
+
+        <!-- =========================
+             LEFT SIDE - IMAGE
+        ========================== -->
+
+        <div class="about-image">
+
+            <img src="{{ url_for('static', filename='images/binod.jpeg') }}"
+                 alt="{{ portfolio.personal.name }}">
+
+        </div>
+
+        <!-- =========================
+             RIGHT SIDE - CONTENT
+        ========================== -->
+
+        <div class="about-content">
+
+            <span class="section-tag">
+                ABOUT ME
+            </span>
+
+            <p class="hello">
+                Hello 👋
+            </p>
+
+            <h2>
+                I'm {{ portfolio.personal.name }}
+            </h2>
+
+            <h3>
+                {{ portfolio.personal.title }}
+            </h3>
+
+            <p class="about-description">
+                {{ portfolio.personal.description }}
+            </p>
+
+            <!-- =========================
+                 INFORMATION CARDS
+            ========================== -->
+
+            <div class="about-info">
+
+                <!-- Achievement -->
+
+                <div class="info-card">
+
+                    <span class="icon">
+                        <i class="fa-solid fa-trophy"></i>
+                    </span>
+
+                    <h4>
+                        Achievement
+                    </h4>
+
+                    <p>
+                        Runner-up<br>
+                        Hult Prize Softwarica
+                    </p>
+
+                </div>
+
+                <!-- Projects -->
+
+                <div class="info-card">
+
+                    <span class="icon">
+                        <i class="fa-solid fa-laptop-code"></i>
+                    </span>
+
+                    <h4>
+                        Projects
+                    </h4>
+
+                    <p>
+                        AI & Web<br>
+                        Development
+                    </p>
+
+                </div>
+
+                <!-- Location -->
+
+                <div class="info-card">
+
+                    <span class="icon">
+                        <i class="fa-solid fa-location-dot"></i>
+                    </span>
+
+                    <h4>
+                        Location
+                    </h4>
+
+                    <p>
+                        {{ portfolio.personal.location }}
+                    </p>
+
+                </div>
+
+            </div>
+
+            <!-- =========================
+                 BUTTONS
+            ========================== -->
+
+            <div class="about-buttons">
+
+                <a href="#projects" class="btn-primary">
+                    <i class="fa-solid fa-folder-open"></i>
+                    View Projects
+                </a>
+
+                <a href="{{ url_for('static', filename='files/Binod_Bajgai_CV.pdf') }}"
+                   class="btn-secondary"
+                   download>
+
+                    <i class="fa-solid fa-download"></i>
+                    Download CV
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
