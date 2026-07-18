@@ -1,0 +1,336 @@
+/* ==========================================
+                PROJECTS
+========================================== */
+
+.projects{
+    padding:120px 8%;
+    background:#070B1C;
+    position:relative;
+    overflow:hidden;
+}
+
+/* Background Glow */
+
+.projects::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:500px;
+    height:500px;
+
+    background:#00F5FF18;
+
+    filter:blur(180px);
+
+    left:-200px;
+    bottom:-100px;
+
+}
+
+/* ==========================================
+                CONTAINER
+========================================== */
+
+.projects-container{
+
+    position:relative;
+    z-index:2;
+
+}
+
+/* ==========================================
+                HEADER
+========================================== */
+
+.projects-header{
+
+    text-align:center;
+    max-width:750px;
+    margin:0 auto 80px;
+
+}
+
+.projects-header h2{
+
+    font-size:52px;
+    color:#fff;
+    margin:20px 0;
+
+}
+
+.projects-header p{
+
+    color:#b5b5b5;
+    line-height:1.8;
+
+}
+
+/* ==========================================
+                GRID
+========================================== */
+
+.projects-grid{
+
+    display:flex;
+    flex-direction:column;
+    gap:70px;
+
+}
+
+/* ==========================================
+                CARD
+========================================== */
+
+.project-card{
+
+    display:grid;
+    grid-template-columns:1fr 1fr;
+
+    gap:50px;
+
+    background:#101728;
+
+    border:1px solid rgba(255,255,255,.05);
+
+    border-radius:28px;
+
+    overflow:hidden;
+
+    transition:.35s;
+
+}
+
+.project-card:hover{
+
+    transform:translateY(-12px);
+
+    border-color:#00F5FF;
+
+    box-shadow:0 25px 60px rgba(0,245,255,.15);
+
+}
+
+/* ==========================================
+                IMAGE
+========================================== */
+
+.project-image{
+
+    overflow:hidden;
+
+}
+
+.project-image img{
+
+    width:100%;
+    height:100%;
+
+    object-fit:cover;
+
+    transition:.6s;
+
+}
+
+.project-card:hover img{
+
+    transform:scale(1.08);
+
+}
+
+/* ==========================================
+                CONTENT
+========================================== */
+
+.project-content{
+
+    padding:50px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+}
+
+.project-subtitle{
+
+    color:#00F5FF;
+
+    font-size:15px;
+
+    text-transform:uppercase;
+
+    letter-spacing:1px;
+
+}
+
+.project-content h3{
+
+    color:#fff;
+
+    font-size:38px;
+
+    margin:15px 0;
+
+}
+
+.project-content p{
+
+    color:#b7b7b7;
+
+    line-height:1.8;
+
+    margin-bottom:35px;
+
+}
+
+/* ==========================================
+                TECH STACK
+========================================== */
+
+.tech-stack{
+
+    display:flex;
+
+    gap:12px;
+
+    flex-wrap:wrap;
+
+    margin-bottom:35px;
+
+}
+
+.tech-stack span{
+
+    padding:10px 18px;
+
+    border-radius:40px;
+
+    background:#0E1A30;
+
+    color:#00F5FF;
+
+    font-size:14px;
+
+    border:1px solid rgba(0,245,255,.15);
+
+}
+
+/* ==========================================
+                BUTTONS
+========================================== */
+
+.project-buttons{
+
+    display:flex;
+
+    gap:18px;
+
+}
+
+.project-buttons a{
+
+    text-decoration:none;
+
+}
+
+/* ==========================================
+                RESPONSIVE
+========================================== */
+
+@media(max-width:1000px){
+
+.project-card{
+
+grid-template-columns:1fr;
+
+}
+
+.project-image{
+
+height:320px;
+
+}
+
+.project-content{
+
+padding:35px;
+
+}
+
+}
+
+@media(max-width:650px){
+
+.projects{
+
+padding:100px 8%;
+
+}
+
+.projects-header h2{
+
+font-size:38px;
+
+}
+
+.project-content h3{
+
+font-size:28px;
+
+}
+
+.project-buttons{
+
+flex-direction:column;
+
+}
+
+}
+
+/* Alternate Layout */
+
+.project-card.reverse{
+
+    grid-template-columns:1fr 1fr;
+
+}
+
+.project-card.reverse .project-image{
+
+    order:2;
+
+}
+
+.project-card.reverse .project-content{
+
+    order:1;
+
+}
+
+.featured-badge{
+
+    display:inline-block;
+
+    padding:8px 18px;
+
+    margin-bottom:20px;
+
+    background:rgba(0,245,255,.12);
+
+    color:#00F5FF;
+
+    border-radius:30px;
+
+    font-size:13px;
+
+    font-weight:600;
+
+    letter-spacing:1px;
+
+    border:1px solid rgba(0,245,255,.25);
+
+}

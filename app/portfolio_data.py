@@ -2,7 +2,7 @@ portfolio = {
     "personal": {
         "name": "Binod Bajgai",
         "title": "Computer Science with AI Student",
-        "subtitle": "AI Developer | Python Developer | Flask Developer",
+        "subtitle": "AI Developer • Python Developer • Flask Developer",
         "description": (
             "I'm a Computer Science with Artificial Intelligence student "
             "passionate about building modern web applications and AI-powered "

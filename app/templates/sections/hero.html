@@ -1,0 +1,85 @@
+<section class="hero" id="hero">
+
+    <div class="hero-container">
+
+        <!-- =========================
+                LEFT CONTENT
+        ========================== -->
+
+        <div class="hero-content" data-aos="fade-right">
+
+            <p class="hero-intro">
+                👋 Hello, I'm
+            </p>
+
+            <h1>
+                <span>{{ portfolio.personal.name.split()[0] }}</span><br>
+                {{ portfolio.personal.name.split()[1] }}
+            </h1>
+
+            <h2>{{ portfolio.personal.subtitle }}</h2>
+
+            <p class="hero-description">
+                {{ portfolio.personal.description }}
+            </p>
+
+            <!-- Buttons -->
+
+            <div class="hero-buttons">
+
+                <a href="#projects" class="btn-primary">
+                    <i class="fa-solid fa-code"></i>
+                    View Projects
+                </a>
+
+                <a href="#" class="btn-secondary">
+                    <i class="fa-solid fa-download"></i>
+                    Download CV
+                </a>
+
+            </div>
+
+            <!-- Tech Pills -->
+
+            <div class="hero-tech">
+
+                {% for skill in portfolio.skills[:6] %}
+
+                <span>{{ skill.name }}</span>
+
+                {% endfor %}
+
+            </div>
+
+        </div>
+
+        <!-- =========================
+                RIGHT IMAGE
+        ========================== -->
+
+        <div class="hero-image" data-aos="fade-left">
+
+            <div class="image-wrapper">
+
+                <div class="hero-glow"></div>
+
+                <img
+                    src="{{ url_for('static', filename='images/binod.jpeg') }}"
+                    alt="{{ portfolio.personal.name }}"
+                >
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- Scroll Indicator -->
+
+    <a href="#about" class="scroll-down">
+
+        <span></span>
+
+    </a>
+
+</section>
