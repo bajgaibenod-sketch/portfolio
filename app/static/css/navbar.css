@@ -1,0 +1,180 @@
+/* ==========================================
+                NAVBAR
+========================================== */
+
+.navbar{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+
+    background:rgba(7,11,28,.75);
+    backdrop-filter:blur(18px);
+    -webkit-backdrop-filter:blur(18px);
+
+    border-bottom:1px solid rgba(255,255,255,.05);
+
+    z-index:1000;
+
+    transition:.35s ease;
+}
+
+.navbar.scrolled{
+    background:rgba(7,11,28,.92);
+    box-shadow:0 10px 30px rgba(0,0,0,.35);
+}
+
+/* ==========================================
+                CONTAINER
+========================================== */
+
+.nav-container{
+
+    width:100%;
+    max-width:1400px;
+
+    margin:0 auto;
+
+    padding:20px 60px;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+}
+
+/* ==========================================
+                LOGO
+========================================== */
+
+.logo{
+
+    font-size:34px;
+
+    font-weight:700;
+
+    color:#ffffff;
+
+    text-decoration:none;
+
+}
+
+.logo span{
+
+    color:#00F5FF;
+
+}
+
+/* ==========================================
+                MENU
+========================================== */
+
+.nav-links{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:40px;
+
+    list-style:none;
+
+}
+
+.nav-links li{
+
+    list-style:none;
+
+}
+
+.nav-links a{
+
+    position:relative;
+
+    color:#d7d7d7;
+
+    font-size:16px;
+
+    font-weight:500;
+
+    text-decoration:none;
+
+    transition:.3s;
+
+}
+
+.nav-links a:hover{
+
+    color:#00F5FF;
+
+}
+
+.nav-links a.active{
+
+    color:#00F5FF;
+
+}
+
+/* Underline */
+
+.nav-links a::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:50%;
+
+    bottom:-8px;
+
+    width:0;
+
+    height:2px;
+
+    background:#00F5FF;
+
+    transform:translateX(-50%);
+
+    transition:.3s;
+
+}
+
+.nav-links a:hover::after,
+
+.nav-links a.active::after{
+
+    width:100%;
+
+}
+
+/* ==========================================
+            RESPONSIVE
+========================================== */
+
+@media(max-width:900px){
+
+    .nav-container{
+
+        padding:18px 25px;
+
+    }
+
+    .nav-links{
+
+        gap:25px;
+
+    }
+
+}
+
+@media(max-width:768px){
+
+    .nav-links{
+
+        display:none;
+
+    }
+
+}

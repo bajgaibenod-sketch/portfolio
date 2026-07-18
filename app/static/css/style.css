@@ -7,3 +7,45 @@
 @import url("contact.css");
 @import url("footer.css");
 @import url("responsive.css");
+
+/* ===================================
+            GLOBAL STYLES
+=================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    background:#070B1C;
+    color:#fff;
+    overflow-x:hidden;
+
+    /* Prevent the fixed navbar from covering content */
+    padding-top:80px;
+}
+
+section{
+    scroll-margin-top:100px;
+}
+
+img{
+    max-width:100%;
+    display:block;
+}
+
+a{
+    text-decoration:none;
+    color:inherit;
+}
+
+ul{
+    list-style:none;
+}
