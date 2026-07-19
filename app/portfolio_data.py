@@ -1,20 +1,26 @@
 portfolio = {
+    
     "personal": {
-        "name": "Binod Bajgai",
-        "title": "Computer Science with AI Student",
-        "subtitle": "AI Developer • Python Developer • Flask Developer",
-        "description": (
-            "I'm a Computer Science with Artificial Intelligence student "
-            "passionate about building modern web applications and AI-powered "
-            "solutions. I enjoy transforming ideas into practical software "
-            "while continuously exploring new technologies and improving my "
-            "development skills."
-        ),
-        "location": "Kathmandu, Nepal",
-        "email": "your@email.com",
-        "github": "https://github.com/yourusername",
-        "linkedin": "https://linkedin.com/in/yourusername"
-    },
+    "name": "Binod Bajgai",
+    "title": "Computer Science with AI Student",
+    "subtitle": "AI Developer | Python Developer | Flask Developer",
+
+    "description": (
+        "I'm a Computer Science with Artificial Intelligence student passionate "
+        "about building modern web applications and AI-powered solutions."
+    ),
+
+    "location": "Kathmandu, Nepal",
+
+    "email": "your-real-email@example.com",
+
+    "phone": "+977-98XXXXXXXX",
+
+    "github": "https://github.com/bajgaibenod-sketch",
+
+    "linkedin": "https://linkedin.com/in/binod-bajgai"
+},
+
 
     "skills": [
         {
@@ -85,7 +91,7 @@ portfolio = {
                 "A premium Flask-based portfolio featuring modern UI, "
                 "glassmorphism, responsive layouts, and interactive animations."
             ),
-            "image": "images/portfolio.png",
+            "image": "images/Developer_Portfolio.png",
             "tech": [
                 "Flask",
                 "HTML",
@@ -95,5 +101,36 @@ portfolio = {
             "github": "#",
             "demo": "#"
         }
-    ]
+    ],
+
+
+
+    "experience": [
+
+    {
+        "year": "2025 - Present",
+        "title": "BSc Computer Science with Artificial Intelligence",
+        "company": "Coventry University | Softwarica College",
+        "description":
+        "Currently pursuing a Bachelor's degree focused on Artificial Intelligence, software engineering, algorithms, databases, and modern web development."
+    },
+
+    {
+        "year": "2026",
+        "title": "Runner-up",
+        "company": "Hult Prize Softwarica",
+        "description":
+        "Worked with a team to design and present an innovative sustainability solution during the Hult Prize competition."
+    },
+
+    {
+        "year": "2026",
+        "title": "EcoTrack",
+        "company": "AI Carbon Intelligence Platform",
+        "description":
+        "Designed and developed an AI-powered carbon footprint monitoring platform using Flask, Python, MySQL, and machine learning concepts."
+    }
+
+]
+    
 }

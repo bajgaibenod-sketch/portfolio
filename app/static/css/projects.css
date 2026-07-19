@@ -1,104 +1,162 @@
 /* ==========================================
-                PROJECTS
+            PROJECTS SECTION
 ========================================== */
 
 .projects{
-    padding:120px 8%;
-    background:#070B1C;
     position:relative;
+    padding:140px 8%;
+    background:#070B1C;
     overflow:hidden;
 }
 
-/* Background Glow */
+/* ================================
+        BACKGROUND GLOW
+================================ */
 
 .projects::before{
-
     content:"";
-
     position:absolute;
+    width:600px;
+    height:600px;
+    left:-250px;
+    top:120px;
+    background:#00F5FF18;
+    filter:blur(200px);
+}
 
+.projects::after{
+    content:"";
+    position:absolute;
     width:500px;
     height:500px;
-
-    background:#00F5FF18;
-
+    right:-180px;
+    bottom:-120px;
+    background:#7B61FF18;
     filter:blur(180px);
-
-    left:-200px;
-    bottom:-100px;
-
 }
 
 /* ==========================================
-                CONTAINER
+            CONTAINER
 ========================================== */
 
 .projects-container{
-
     position:relative;
     z-index:2;
-
+    max-width:1400px;
+    margin:auto;
 }
 
 /* ==========================================
-                HEADER
+            HEADER
 ========================================== */
 
 .projects-header{
 
     text-align:center;
-    max-width:750px;
-    margin:0 auto 80px;
+
+    max-width:760px;
+
+    margin:0 auto 90px;
 
 }
 
 .projects-header h2{
 
-    font-size:52px;
+    font-size:54px;
+
     color:#fff;
-    margin:20px 0;
+
+    margin:18px 0;
+
+    font-weight:700;
 
 }
 
 .projects-header p{
 
-    color:#b5b5b5;
-    line-height:1.8;
+    color:#b8b8b8;
+
+    line-height:1.9;
+
+    font-size:17px;
 
 }
 
 /* ==========================================
-                GRID
+            GRID
 ========================================== */
 
 .projects-grid{
 
     display:flex;
+
     flex-direction:column;
-    gap:70px;
+
+    gap:90px;
 
 }
 
 /* ==========================================
-                CARD
+            PROJECT CARD
 ========================================== */
 
 .project-card{
 
     display:grid;
-    grid-template-columns:1fr 1fr;
 
-    gap:50px;
+    grid-template-columns:1.05fr 1fr;
 
-    background:#101728;
+    gap:60px;
 
-    border:1px solid rgba(255,255,255,.05);
+    align-items:center;
+
+    background:rgba(16,23,40,.72);
+
+    backdrop-filter:blur(18px);
+
+    border:1px solid rgba(255,255,255,.06);
 
     border-radius:28px;
 
     overflow:hidden;
 
-    transition:.35s;
+    transition:.45s ease;
+
+    position:relative;
+
+}
+
+/* glowing border */
+
+.project-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    border-radius:28px;
+
+    padding:1px;
+
+    background:linear-gradient(
+        135deg,
+        rgba(0,245,255,.35),
+        rgba(123,97,255,.25)
+    );
+
+    -webkit-mask:
+      linear-gradient(#fff 0 0) content-box,
+      linear-gradient(#fff 0 0);
+
+    -webkit-mask-composite:xor;
+
+    mask-composite:exclude;
+
+    opacity:0;
+
+    transition:.45s;
 
 }
 
@@ -106,198 +164,71 @@
 
     transform:translateY(-12px);
 
-    border-color:#00F5FF;
+    box-shadow:0 30px 60px rgba(0,245,255,.14);
 
-    box-shadow:0 25px 60px rgba(0,245,255,.15);
+}
+
+.project-card:hover::before{
+
+    opacity:1;
 
 }
 
 /* ==========================================
-                IMAGE
+            IMAGE
 ========================================== */
 
 .project-image{
 
+    position:relative;
+
     overflow:hidden;
+
+    height:100%;
+
+    min-height:420px;
 
 }
 
 .project-image img{
 
     width:100%;
+
     height:100%;
 
     object-fit:cover;
 
-    transition:.6s;
+    transition:.65s ease;
 
 }
 
-.project-card:hover img{
+/* dark overlay */
+
+.project-image::after{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:linear-gradient(
+        transparent,
+        rgba(7,11,28,.18),
+        rgba(7,11,28,.45)
+    );
+
+}
+
+.project-card:hover .project-image img{
 
     transform:scale(1.08);
 
 }
 
 /* ==========================================
-                CONTENT
+        ALTERNATE CARDS
 ========================================== */
-
-.project-content{
-
-    padding:50px;
-
-    display:flex;
-
-    flex-direction:column;
-
-    justify-content:center;
-
-}
-
-.project-subtitle{
-
-    color:#00F5FF;
-
-    font-size:15px;
-
-    text-transform:uppercase;
-
-    letter-spacing:1px;
-
-}
-
-.project-content h3{
-
-    color:#fff;
-
-    font-size:38px;
-
-    margin:15px 0;
-
-}
-
-.project-content p{
-
-    color:#b7b7b7;
-
-    line-height:1.8;
-
-    margin-bottom:35px;
-
-}
-
-/* ==========================================
-                TECH STACK
-========================================== */
-
-.tech-stack{
-
-    display:flex;
-
-    gap:12px;
-
-    flex-wrap:wrap;
-
-    margin-bottom:35px;
-
-}
-
-.tech-stack span{
-
-    padding:10px 18px;
-
-    border-radius:40px;
-
-    background:#0E1A30;
-
-    color:#00F5FF;
-
-    font-size:14px;
-
-    border:1px solid rgba(0,245,255,.15);
-
-}
-
-/* ==========================================
-                BUTTONS
-========================================== */
-
-.project-buttons{
-
-    display:flex;
-
-    gap:18px;
-
-}
-
-.project-buttons a{
-
-    text-decoration:none;
-
-}
-
-/* ==========================================
-                RESPONSIVE
-========================================== */
-
-@media(max-width:1000px){
-
-.project-card{
-
-grid-template-columns:1fr;
-
-}
-
-.project-image{
-
-height:320px;
-
-}
-
-.project-content{
-
-padding:35px;
-
-}
-
-}
-
-@media(max-width:650px){
-
-.projects{
-
-padding:100px 8%;
-
-}
-
-.projects-header h2{
-
-font-size:38px;
-
-}
-
-.project-content h3{
-
-font-size:28px;
-
-}
-
-.project-buttons{
-
-flex-direction:column;
-
-}
-
-}
-
-/* Alternate Layout */
-
-.project-card.reverse{
-
-    grid-template-columns:1fr 1fr;
-
-}
 
 .project-card.reverse .project-image{
 
@@ -310,20 +241,43 @@ flex-direction:column;
     order:1;
 
 }
+/* ==========================================
+            PROJECT CONTENT
+========================================== */
+
+.project-content{
+
+    padding:60px 55px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+}
 
 .featured-badge{
 
-    display:inline-block;
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:8px;
+
+    width:max-content;
 
     padding:8px 18px;
 
-    margin-bottom:20px;
+    margin-bottom:22px;
 
-    background:rgba(0,245,255,.12);
+    border-radius:50px;
+
+    background:rgba(0,245,255,.10);
+
+    border:1px solid rgba(0,245,255,.25);
 
     color:#00F5FF;
-
-    border-radius:30px;
 
     font-size:13px;
 
@@ -331,6 +285,553 @@ flex-direction:column;
 
     letter-spacing:1px;
 
-    border:1px solid rgba(0,245,255,.25);
+}
+
+.featured-badge::before{
+
+    content:"★";
+
+    font-size:12px;
+
+}
+
+.project-subtitle{
+
+    color:#00F5FF;
+
+    font-size:15px;
+
+    letter-spacing:2px;
+
+    text-transform:uppercase;
+
+    margin-bottom:12px;
+
+}
+
+.project-content h3{
+
+    color:#fff;
+
+    font-size:42px;
+
+    line-height:1.2;
+
+    margin-bottom:20px;
+
+    transition:.35s;
+
+}
+
+.project-card:hover h3{
+
+    color:#00F5FF;
+
+}
+
+.project-content p{
+
+    color:#b7b7b7;
+
+    line-height:1.9;
+
+    font-size:16px;
+
+    margin-bottom:35px;
+
+}
+
+/* ==========================================
+            TECH STACK
+========================================== */
+
+.tech-stack{
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    gap:14px;
+
+    margin-bottom:40px;
+
+}
+
+.tech-stack span{
+
+    padding:10px 18px;
+
+    border-radius:30px;
+
+    background:#0E1A30;
+
+    color:#00F5FF;
+
+    border:1px solid rgba(0,245,255,.15);
+
+    font-size:14px;
+
+    transition:.35s;
+
+}
+
+.tech-stack span:hover{
+
+    transform:translateY(-5px);
+
+    background:#00F5FF;
+
+    color:#070B1C;
+
+    box-shadow:0 10px 25px rgba(0,245,255,.30);
+
+}
+
+/* ==========================================
+            BUTTONS
+========================================== */
+
+.project-buttons{
+
+    display:flex;
+
+    gap:18px;
+
+    flex-wrap:wrap;
+
+}
+
+.project-buttons a{
+
+    text-decoration:none;
+
+}
+
+/* Primary */
+
+.project-buttons .btn-primary{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    padding:16px 28px;
+
+    border-radius:50px;
+
+    background:#00F5FF;
+
+    color:#070B1C;
+
+    font-weight:600;
+
+    transition:.35s;
+
+}
+
+.project-buttons .btn-primary i{
+
+    transition:.35s;
+
+}
+
+.project-buttons .btn-primary:hover{
+
+    transform:translateY(-5px);
+
+    box-shadow:0 18px 35px rgba(0,245,255,.35);
+
+}
+
+.project-buttons .btn-primary:hover i{
+
+    transform:translateX(6px);
+
+}
+
+/* Secondary */
+
+.project-buttons .btn-secondary{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    padding:16px 28px;
+
+    border-radius:50px;
+
+    border:2px solid #00F5FF;
+
+    color:#00F5FF;
+
+    background:transparent;
+
+    font-weight:600;
+
+    transition:.35s;
+
+}
+
+.project-buttons .btn-secondary:hover{
+
+    background:#00F5FF;
+
+    color:#070B1C;
+
+    transform:translateY(-5px);
+
+}
+
+.project-buttons .btn-secondary i{
+
+    font-size:18px;
+
+}
+
+/* ==========================================
+            HOVER EFFECTS
+========================================== */
+
+.project-card:hover .project-content{
+
+    transform:translateY(-3px);
+
+}
+
+.project-content{
+
+    transition:.35s;
+
+}
+
+/* ==========================================
+            IMAGE GLOW
+========================================== */
+
+.project-image::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:250px;
+
+    height:250px;
+
+    border-radius:50%;
+
+    background:#00F5FF22;
+
+    filter:blur(80px);
+
+    top:-80px;
+
+    left:-80px;
+
+    opacity:0;
+
+    transition:.45s;
+
+    z-index:2;
+
+}
+
+.project-card:hover .project-image::before{
+
+    opacity:1;
+
+}
+/* ==========================================
+            FLOATING ANIMATION
+========================================== */
+
+@keyframes projectFloat{
+
+    0%{
+        transform:translateY(0);
+    }
+
+    50%{
+        transform:translateY(-8px);
+    }
+
+    100%{
+        transform:translateY(0);
+    }
+
+}
+
+.project-card{
+
+    animation:projectFloat 7s ease-in-out infinite;
+
+}
+
+.project-card:nth-child(2){
+
+    animation-delay:1s;
+
+}
+
+.project-card:nth-child(3){
+
+    animation-delay:2s;
+
+}
+
+.project-card:nth-child(4){
+
+    animation-delay:3s;
+
+}
+
+/* ==========================================
+            IMAGE SHADOW
+========================================== */
+
+.project-image img{
+
+    display:block;
+
+    box-shadow:0 25px 60px rgba(0,0,0,.35);
+
+}
+
+/* ==========================================
+            CARD TRANSITIONS
+========================================== */
+
+.project-card,
+.project-image img,
+.project-content,
+.tech-stack span,
+.project-buttons a{
+
+    transition:all .35s ease;
+
+}
+
+/* ==========================================
+            SCROLLBAR FIX
+========================================== */
+
+.project-card{
+
+    will-change:transform;
+
+}
+
+/* ==========================================
+            TABLET
+========================================== */
+
+@media(max-width:1100px){
+
+    .project-card{
+
+        grid-template-columns:1fr;
+
+        gap:0;
+
+    }
+
+    .project-card.reverse .project-image{
+
+        order:1;
+
+    }
+
+    .project-card.reverse .project-content{
+
+        order:2;
+
+    }
+
+    .project-image{
+
+        min-height:320px;
+
+    }
+
+    .project-content{
+
+        padding:40px;
+
+    }
+
+    .projects-header h2{
+
+        font-size:42px;
+
+    }
+
+}
+
+/* ==========================================
+            MOBILE
+========================================== */
+
+@media(max-width:768px){
+
+    .projects{
+
+        padding:100px 8%;
+
+    }
+
+    .projects-header{
+
+        margin-bottom:60px;
+
+    }
+
+    .projects-header h2{
+
+        font-size:36px;
+
+    }
+
+    .projects-header p{
+
+        font-size:15px;
+
+    }
+
+    .project-content{
+
+        padding:30px;
+
+    }
+
+    .project-content h3{
+
+        font-size:30px;
+
+    }
+
+    .project-content p{
+
+        font-size:15px;
+
+    }
+
+    .project-buttons{
+
+        flex-direction:column;
+
+        width:100%;
+
+    }
+
+    .project-buttons a{
+
+        justify-content:center;
+
+        width:100%;
+
+    }
+
+    .tech-stack{
+
+        gap:10px;
+
+    }
+
+}
+
+/* ==========================================
+            SMALL DEVICES
+========================================== */
+
+@media(max-width:480px){
+
+    .projects{
+
+        padding:80px 6%;
+
+    }
+
+    .projects-header h2{
+
+        font-size:30px;
+
+    }
+
+    .project-content{
+
+        padding:24px;
+
+    }
+
+    .project-content h3{
+
+        font-size:26px;
+
+    }
+
+    .project-image{
+
+        min-height:250px;
+
+    }
+
+    .featured-badge{
+
+        font-size:11px;
+
+        padding:7px 14px;
+
+    }
+
+    .tech-stack span{
+
+        font-size:12px;
+
+        padding:8px 14px;
+
+    }
+
+}
+
+/* ==========================================
+            PREMIUM GLOW
+========================================== */
+
+.project-card:hover{
+
+    box-shadow:
+        0 25px 60px rgba(0,245,255,.18),
+        0 0 40px rgba(123,97,255,.12);
+
+}
+
+/* ==========================================
+            SMOOTH IMAGE HOVER
+========================================== */
+
+.project-card:hover .project-image img{
+
+    transform:scale(1.08) rotate(.8deg);
+
+}
+
+/* ==========================================
+            TITLE EFFECT
+========================================== */
+
+.project-content h3{
+
+    transition:.35s;
+
+}
+
+.project-card:hover h3{
+
+    letter-spacing:.5px;
 
 }

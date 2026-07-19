@@ -1,0 +1,59 @@
+<section class="experience" id="experience">
+
+    <div class="experience-container">
+
+        <!-- Section Header -->
+
+        <div class="experience-header" data-aos="fade-up">
+
+            <span class="section-tag">MY JOURNEY</span>
+
+            <h2>Experience & Education</h2>
+
+            <p>
+                My learning journey, achievements, and projects that have
+                shaped my growth as a software developer.
+            </p>
+
+        </div>
+
+        <!-- Timeline -->
+
+        <div class="timeline">
+
+            {% for item in portfolio.experience %}
+
+            <div class="timeline-item {% if loop.index is even %}right{% else %}left{% endif %}"
+                 data-aos="{% if loop.index is odd %}fade-right{% else %}fade-left{% endif %}">
+
+                <!-- Timeline Dot -->
+
+                <div class="timeline-dot"></div>
+
+                <!-- Timeline Card -->
+
+                <div class="timeline-card">
+
+                    <span class="timeline-year">
+                        {{ item.year }}
+                    </span>
+
+                    <h3>{{ item.title }}</h3>
+
+                    <h4>{{ item.company }}</h4>
+
+                    <p>
+                        {{ item.description }}
+                    </p>
+
+                </div>
+
+            </div>
+
+            {% endfor %}
+
+        </div>
+
+    </div>
+
+</section>

@@ -1,0 +1,201 @@
+<section class="contact" id="contact">
+
+    <div class="contact-container">
+
+        <!-- Header -->
+
+        <div class="contact-header" data-aos="fade-up">
+
+            <span class="section-tag">CONTACT</span>
+
+            <h2>Let's Build Something Amazing</h2>
+
+            <p>
+                Have a project, collaboration, or opportunity in mind?
+                I'd love to hear from you.
+            </p>
+
+        </div>
+
+        <div class="contact-wrapper">
+
+            <!-- =======================
+                 LEFT SIDE
+            ======================== -->
+
+            <div class="contact-info" data-aos="fade-right">
+
+                <!-- Location -->
+
+                <div class="contact-card">
+
+                    <div class="contact-icon">
+                        <i class="fa-solid fa-location-dot"></i>
+                    </div>
+
+                    <div>
+
+                        <h3>Location</h3>
+
+                        <p>{{ portfolio.personal.location }}</p>
+
+                    </div>
+
+                </div>
+
+                <!-- Email -->
+
+                <div class="contact-card">
+
+                    <div class="contact-icon">
+                        <i class="fa-solid fa-envelope"></i>
+                    </div>
+
+                    <div>
+
+                        <h3>Email</h3>
+
+                        <p>{{ portfolio.personal.email }}</p>
+
+                    </div>
+
+                </div>
+
+                <!-- Phone -->
+
+                <div class="contact-card">
+
+                    <div class="contact-icon">
+                        <i class="fa-solid fa-phone"></i>
+                    </div>
+
+                    <div>
+
+                        <h3>Phone</h3>
+
+                        <p>{{ portfolio.personal.phone }}</p>
+
+                    </div>
+
+                </div>
+
+                <!-- GitHub -->
+
+                <div class="contact-card">
+
+                    <div class="contact-icon">
+                        <i class="fa-brands fa-github"></i>
+                    </div>
+
+                    <div>
+
+                        <h3>GitHub</h3>
+
+                        <p>
+                            <a href="{{ portfolio.personal.github }}"
+                               target="_blank">
+                                Visit Profile
+                            </a>
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <!-- LinkedIn -->
+
+                <div class="contact-card">
+
+                    <div class="contact-icon">
+                        <i class="fa-brands fa-linkedin"></i>
+                    </div>
+
+                    <div>
+
+                        <h3>LinkedIn</h3>
+
+                        <p>
+                            <a href="{{ portfolio.personal.linkedin }}"
+                               target="_blank">
+                                View Profile
+                            </a>
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <!-- Social Icons -->
+
+                <div class="social-links">
+
+                    <a href="{{ portfolio.personal.github }}" target="_blank">
+                        <i class="fa-brands fa-github"></i>
+                    </a>
+
+                    <a href="{{ portfolio.personal.linkedin }}" target="_blank">
+                        <i class="fa-brands fa-linkedin"></i>
+                    </a>
+
+                </div>
+
+            </div>
+
+            <!-- =======================
+                 CONTACT FORM
+            ======================== -->
+
+            <form class="contact-form" data-aos="fade-left">
+
+                <div class="input-group">
+
+                    <input
+                        type="text"
+                        placeholder="Your Name"
+                        required>
+
+                </div>
+
+                <div class="input-group">
+
+                    <input
+                        type="email"
+                        placeholder="Your Email"
+                        required>
+
+                </div>
+
+                <div class="input-group">
+
+                    <input
+                        type="text"
+                        placeholder="Subject">
+
+                </div>
+
+                <div class="input-group">
+
+                    <textarea
+                        rows="7"
+                        placeholder="Your Message"
+                        required></textarea>
+
+                </div>
+
+                <button
+                    type="submit"
+                    class="btn-primary">
+
+                    Send Message
+
+                    <i class="fa-solid fa-paper-plane"></i>
+
+                </button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+</section>
